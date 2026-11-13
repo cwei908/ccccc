@@ -1,0 +1,12 @@
+{
+  "name": "stock-notes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "個股研究筆記：Markdown 寫內容，零相依腳本檢查並產生靜態網頁",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/build.mjs --check",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- 此檔由 scripts/build.mjs 產生，請勿手動修改；要改內容請改 content/ 後重新建置 -->
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>關於本站｜個股研究筆記</title>
+  <meta name="description" content="這個網站怎麼運作、每篇筆記為什麼長得一樣，以及怎麼請 AI 新增下一篇。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="site-name" href="index.html">個股研究筆記</a>
+      <nav aria-label="主選單">
+        <a href="index.html">筆記總覽</a>
+        <a href="about.html" aria-current="page">關於本站</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <article class="page">
+      <header class="page-head">
+        <div class="wrap">
+          <h1>關於本站</h1>
+          <p class="tagline">這個網站怎麼運作、每篇筆記為什麼長得一樣，以及怎麼請 AI 新增下一篇。</p>
+        </div>
+      </header>
+      <div class="wrap">
+        <div class="prose">
+<h2>這是什麼</h2>
+<p>這裡收集我研究台股公司時寫的筆記。一家公司一頁，每一頁都用同樣的八個章節，這樣不同公司之間可以直接比較，過一季回來更新時也知道要改哪裡。</p>
+<p>這些筆記是學習用的整理，不是投資建議，也不會出現「該不該買」這類結論。</p>
+<h2>每篇筆記的固定章節</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">章節</th><th scope="col">寫什麼</th></tr></thead>
+<tbody>
+<tr><td>公司在做什麼</td><td>賣什麼、賣給誰、錢從哪裡賺</td></tr>
+<tr><td>產業位置</td><td>在產業鏈的哪一段、地位、競爭者</td></tr>
+<tr><td>近期營運重點</td><td>最近一季的成績和公司對未來的說法</td></tr>
+<tr><td>關鍵數字</td><td>一張表，每個數字都有期間和來源</td></tr>
+<tr><td>觀察與疑問</td><td>我自己的看法和還沒想通的問題</td></tr>
+<tr><td>風險</td><td>至少三點</td></tr>
+<tr><td>追蹤清單</td><td>下次更新時要確認的事</td></tr>
+<tr><td>資料來源</td><td>編號清單，內文的小編號會連到這裡</td></tr>
+</tbody>
+</table></div>
+<p>只有「觀察與疑問」是觀點，其他章節只寫查得到出處的事實。</p>
+<h2>看數字的方式</h2>
+<ul>
+<li>數字後面的小編號可以點，會跳到頁尾的資料來源。</li>
+<li>顏色照台股的習慣：<strong>紅色是增加，綠色是減少</strong>。</li>
+<li>每篇頁首的四格數字，就是「關鍵數字」表的前四列。</li>
+</ul>
+<h2>這個網站怎麼做出來的</h2>
+<p>筆記本身是 Markdown 文字檔，放在 <code>content/notes/</code>。一支小程式會先檢查格式，再把文字檔轉成網頁。檢查的項目包括：章節順序對不對、每個數字有沒有來源、來源有沒有網址和日期、有沒有出現投資建議的用語。只要有一項沒過，網頁就不會產生。</p>
+<p>所有規則都寫在專案的 <a href="https://github.com/cwei908/ccccc/blob/main/AGENTS.md" target="_blank" rel="noopener">AGENTS.md</a>。AI 讀完這份文件，就知道新增一篇筆記要放哪裡、怎麼命名、要寫哪些章節，以及完成前要跑哪些檢查。</p>
+<h2>新增一篇筆記的流程</h2>
+<ol>
+<li>複製 <code>content/notes/_template.md</code>，改名成「股票代號-英文簡稱.md」。</li>
+<li>查資料、照章節填內容，每個數字標上來源編號。</li>
+<li>執行 <code>node scripts/build.mjs</code>，檢查通過後網頁和首頁列表會自動更新。</li>
+</ol>
+<p>實際操作時，我只需要對 AI 說「依照 AGENTS.md 新增 2454 聯發科的筆記」，剩下的步驟它會照規則完成。</p>
+          <p class="updated">最後更新 <time datetime="2026-11-13">2026-11-13</time></p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>這裡是個人學習筆記，不構成任何投資建議。數字以公司公告與公開資訊觀測站為準。</p>
+      <p>cwei908 整理，原始檔與撰寫規則放在 <a href="https://github.com/cwei908/ccccc">GitHub</a>。</p>
+    </div>
+  </footer>
+</body>
+</html>

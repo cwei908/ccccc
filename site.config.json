@@ -1,0 +1,36 @@
+{
+  "title": "個股研究筆記",
+  "tagline": "一家公司一頁，用同一套格式把台股公司看懂。",
+  "description": "台股個股研究筆記：每家公司一頁，固定寫公司在做什麼、產業位置、近期營運、關鍵數字、風險與追蹤清單，所有數字都附來源。",
+  "author": "cwei908",
+  "repoUrl": "https://github.com/cwei908/ccccc",
+  "nav": [
+    { "label": "筆記總覽", "href": "index.html" },
+    { "label": "關於本站", "href": "about.html" }
+  ],
+  "industries": [
+    "半導體",
+    "電子零組件",
+    "電腦及週邊",
+    "通信網路",
+    "光電",
+    "金融保險",
+    "傳產製造",
+    "生技醫療",
+    "ETF"
+  ],
+  "markets": ["上市", "上櫃", "興櫃"],
+  "statuses": ["追蹤中", "觀察", "封存"],
+  "noteSections": [
+    { "id": "business", "title": "公司在做什麼" },
+    { "id": "position", "title": "產業位置" },
+    { "id": "recent", "title": "近期營運重點" },
+    { "id": "numbers", "title": "關鍵數字" },
+    { "id": "thoughts", "title": "觀察與疑問" },
+    { "id": "risks", "title": "風險" },
+    { "id": "watchlist", "title": "追蹤清單" },
+    { "id": "sources", "title": "資料來源" }
+  ],
+  "bannedWords": ["目標價", "買進", "賣出", "必漲", "穩賺", "保證獲利", "強力推薦"],
+  "summaryMaxLength": 60
+}

@@ -35,6 +35,18 @@ node scripts/build.mjs           # 檢查並產生網頁
 
 建置後用瀏覽器開 `index.html` 就能預覽。推上 GitHub 後由 GitHub Pages 直接提供（main 分支根目錄）。
 
+### 法說會素材（選用）
+
+有 AlphaMemo Pro 方案的話，可以把追蹤公司的法說會摘要和逐字稿抓到本機，更新筆記時當素材：
+
+```bash
+echo "ALPHAMEMO_API_KEY=amk_你的金鑰" > .env   # .env 不會進 git
+node scripts/alphamemo-sync.mjs --dry-run      # 先看會讀幾場（不扣額度）
+node scripts/alphamemo-sync.mjs                # 同步到 data/alphamemo/，打開 INDEX.md 看
+```
+
+素材只留在本機，不會出現在網站上。怎麼用在筆記裡見 [AGENTS.md](AGENTS.md) 第 14 節。
+
 ## 目錄
 
 ```
@@ -43,6 +55,7 @@ site.config.json     網站設定（選單、產業清單、章節清單、禁�
 content/notes/       個股筆記的 Markdown 來源
 content/pages/       一般頁面的 Markdown 來源
 scripts/build.mjs    檢查並產生網頁
+scripts/alphamemo-sync.mjs   同步法說會素材到 data/alphamemo/（本機，不進 git）
 assets/              樣式與首頁篩選功能
 index.html、about.html、notes/   建置產物，請勿手動修改
 ```

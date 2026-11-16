@@ -1,2 +1,6 @@
 .DS_Store
 node_modules/
+
+# 法說會素材與 API 金鑰只留在本機（見 AGENTS.md 第 14 節）
+.env
+data/alphamemo/
